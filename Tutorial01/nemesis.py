@@ -9,7 +9,7 @@ def funcArgsKwargs(*args, **kwargs):
 
 print(func())
 print(funcParam("This is the value1 value."))
-print(funcArgsKwargs(("Bitchh", "Betta", "Have", "my", "Money"), age=44, jesus="deliverance"))
+print(funcArgsKwargs(("Bitchh", "Betta", "Have", "my", "Money"), age=44, pythoninc="deliverance"))
 
 class Orisha:
     def __init__(self, name, power):
@@ -18,10 +18,10 @@ class Orisha:
 
     def returnName(self):
         return self._name
-    
+
     def returnPower(self):
         return self._power
-    
+
 sango = Orisha('Sango', 'Wit/Analysis')
 print(sango.returnName())
 print(sango.returnPower())

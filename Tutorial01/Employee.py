@@ -5,7 +5,7 @@ class Employee:
     def LinuxEngineer(self):
         if self._career == 'Linux Engineer':
             return 120_000
-    
+
     def PythonDeveloper(self):
         if self._career == 'Python Developer':
             return 150_000
