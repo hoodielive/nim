@@ -10,5 +10,12 @@ class Employee:
         if self._career == 'Python Developer':
             return 150_000
 
+class Administrator(Employee):
+    def LinuxAdministrator(self):
+        return self._career
+
 linux_admin = Employee("Linux Engineer")
 print("The salary for a Linux Engineer is: ", linux_admin.LinuxEngineer())
+
+linux_admin_01 = Administrator('Much')
+print(linux_admin_01.LinuxAdministrator())
