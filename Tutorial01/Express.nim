@@ -36,3 +36,9 @@ proc printSeq(s: seq, nprinted: int = -1) =
     var nprinted = if nprinted == -1: s.len else: min(nprinted, s.len)
     for i in 0 ..< nprinted:
         echo s[i]
+
+proc add*(x, y: int): int =
+    return x + y
+
+proc addOkay[T](x, y: T): T = 
+    return x + y
