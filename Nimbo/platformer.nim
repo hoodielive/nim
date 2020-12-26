@@ -45,4 +45,27 @@ proc main =
 
         renderer.present()
 
+type
+    Input {.pure.} = enum none, left, right, jump, restart, quit
+
+    # By choosing ref type for the Game state type, we have an easy way to prevent
+    # accidently creating copies of it.
+
+    Game = ref object
+        inputs: array[Input, bool]
+        renderer: Renderer
+
+proc newGame(renderer: RendererPtr): Game = 
+    new result
+    result.renderer = renderer
+
+proc toInput(key: Scancode): Input =
+    case key
+    of SDL_SCANCODE_A: Input.left
+    of SDL_SCANCODE_D: Input.right
+    of SDL_SCANCODE_SPACE: Input.jump
+    of SDL_SCANCODE_R: Input.restart
+    of SDL_SCANCODE_Q: Input.quit
+    else: Input.none
+
 main()
