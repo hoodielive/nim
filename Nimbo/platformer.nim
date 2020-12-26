@@ -53,7 +53,7 @@ type
 
     Game = ref object
         inputs: array[Input, bool]
-        renderer: Renderer
+        renderer: RendererPtr
 
 proc newGame(renderer: RendererPtr): Game = 
     new result
@@ -67,5 +67,38 @@ proc toInput(key: Scancode): Input =
     of SDL_SCANCODE_R: Input.restart
     of SDL_SCANCODE_Q: Input.quit
     else: Input.none
+
+proc handleInput(game: Game) = 
+    var event = defaultEvent
+    while pollEvent(event):
+        case event.kind
+        of QuitEvent:
+            game.inputs[Input.quit] = true
+        of KeyDown:
+            game.inputs[event.key.keysym.scancode.toInput] = true
+        of KeyUp:
+            game.inputs[event.key.keysym.scancode.toInput] = false
+        else:
+            discard
+
+proc render(game: Game) = 
+
+    # Draw over all drawings of the last frame with the default color.
+
+    game.renderer.clear()
+
+    # Show the result on screen.
+
+    game.renderer.present()
+
+var game = newGame(renderer)
+
+
+# Game loop, draws each frame.
+
+while not game.inputs[Input.quit]:
+    game.handleInput()
+    game.render()
+
 
 main()
