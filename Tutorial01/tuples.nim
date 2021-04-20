@@ -2,7 +2,7 @@ var
   someTuple = (10, 0.55, true, "hello")
   anonTuple: (string, int) = ("Jon Doe", 22)
   namedTuple: tuple[name: string, age: int] = ("Adam", 25)
-  emptyTuple: tuple[name: string, age: int]
+  emptyTuple: tuple[name: string, age: int] # Just to showcase an emptyTuple
 
 echo someTuple
 echo anonTuple
