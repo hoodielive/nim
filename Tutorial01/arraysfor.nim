@@ -17,4 +17,7 @@ stdout.write a[2], '\n'
 stdout.write b[2], '\n'
 
 for i in a:
-  stdout.write i
+  stdout.write i, '\n'
+
+for i in a.low .. a.high:
+  stdout.write a[i], '\n'
