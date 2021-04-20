@@ -11,7 +11,7 @@ proc yes(question: string): bool =
 
 if yes("Should I delete all your important files?"):
     echo "I'm sorry Larry, I'm afraid I can't do that."
-else: 
+else:
     echo "I think you know what the problem is."
 
 
@@ -40,5 +40,5 @@ proc printSeq(s: seq, nprinted: int = -1) =
 proc add*(x, y: int): int =
     return x + y
 
-proc addOkay[T](x, y: T): T = 
+proc addOkay[T](x, y: T): T =
     return x + y
