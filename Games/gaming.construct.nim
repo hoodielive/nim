@@ -1,5 +1,6 @@
 import random, terminal, strutils, os
 
+# Doesn't change.
 const TOTAL = 12
 
 proc tryParseInt(s: string): int =
