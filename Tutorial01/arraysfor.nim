@@ -11,3 +11,10 @@ var
   d: array[7, string]
 
 echo a, b, d
+
+stdout.write a[0], '\n'
+stdout.write a[2], '\n'
+stdout.write b[2], '\n'
+
+for i in a:
+  stdout.write i
