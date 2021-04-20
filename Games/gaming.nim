@@ -54,4 +54,3 @@ when isMainModule:
     if total == 0:
       total = 21
     nimgame(total)
-  
