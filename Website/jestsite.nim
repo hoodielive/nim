@@ -30,4 +30,3 @@ routes:
     resp "hello $1".format(@"email")
   post "/":
     resp "Well dont just stand there, say something!"
-
