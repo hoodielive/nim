@@ -6,3 +6,4 @@ try:
 
 except IndexDefect:
   echo "invalid index"
+

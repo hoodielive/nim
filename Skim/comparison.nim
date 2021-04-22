@@ -12,6 +12,22 @@ type
   Type = object
     `int`: int
 
-  let `object` = Type(`int`: 9)
-  assert `object` is Type
-  assert `object`.`int` == 9
+proc something(x: bool): bool {.deprecated: "find some other shit to use".} =
+  result = x
+  return x
+
+var result = something(true)
+
+if result == true:
+  stdout.write "fuck off"
+
+type
+  Subrange = range[0..5]
+
+var str: string = "123456789"
+for i in Subrange.low .. Subrange.high:
+  echo str[i]
+
+while p != nil and p.name != "xyz":
+  # p.name is not evaluated if p == nil
+  p = p.next
