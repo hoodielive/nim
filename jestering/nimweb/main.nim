@@ -11,4 +11,3 @@ import uri                    # We need to encode urls: encodeURL()
 import code/database_utils    # Utils used in the database.
 import code/password_utils    # SQLite
 
-
