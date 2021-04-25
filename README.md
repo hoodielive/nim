@@ -20,4 +20,6 @@ This repository is for exploring the nim programming language.
   and buffer overreads.
 * Pointer arithmetic isn't possible for 'ref types' as they are entirely managed by Nim's GC; this prevents issues such as dangling
   pointers and other memory issues related to managing memory manually.
+* You can use existing C/C++ libraries by writing 'wrapper code' or use c2nim too which converts C/C++ header files to Nim code, which wrap those files.
+* Supports compiling to Javascript and Objective-C (write IOS applications natively in Nim). Also Android apps by using C++ compiliation backend.
 
