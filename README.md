@@ -11,9 +11,13 @@ This repository is for exploring the nim programming language.
 * Nimble is nim's package manager.
 
 ## Core Features
-* Metaprogramming
-* Style-Insenstivity
-* Static Type system
-* Fast Compiliation to C
-* Different Garbage Collectors
+* Metaprogramming.
+* Style-Insenstivity.
+* Static Type system with dynamic type features.
+* Fast Compiliation to C.
+* Different Garbage Collectors.
+* Arrays are bound-checked at compile time, or a runtime when compile-time checks aren't possible, preventing both buffer overflows
+  and buffer overreads.
+* Pointer arithmetic isn't possible for 'ref types' as they are entirely managed by Nim's GC; this prevents issues such as dangling
+  pointers and other memory issues related to managing memory manually.
 
