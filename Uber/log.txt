@@ -1,0 +1,28 @@
+  Verifying dependencies for Uber@1.0.3
+   Warning: No .nimble or .nimble-link file found for /home/arjuna/.nimble/pkgs/nimwc-6.0.6
+      Info: Dependency on jester@any version already satisfied
+  Verifying dependencies for jester@0.5.0
+      Info: Dependency on httpbeast@>= 0.2.2 already satisfied
+  Verifying dependencies for httpbeast@0.2.2
+      Info: Dependency on https://github.com/timotheecour/asynctools@#pr_fix_compilation already satisfied
+  Verifying dependencies for asynctools@#pr_fix_compilation
+      Info: Dependency on https://github.com/timotheecour/asynctools@#pr_fix_compilation already satisfied
+  Verifying dependencies for asynctools@#pr_fix_compilation
+ Installing norm@>= 1.0.16
+Downloading https://github.com/moigagoo/norm using git
+  Verifying dependencies for norm@2.3.0
+ Installing ndb@>= 0.19.9
+Downloading https://github.com/xzfc/ndb.nim using git
+  Verifying dependencies for ndb@0.19.9
+ Installing ndb@0.19.9
+   Success: ndb installed successfully.
+ Installing norm@2.3.0
+   Success: norm installed successfully.
+ Installing dotenv@>= 1.1.1
+Downloading https://github.com/euantorano/dotenv.nim using git
+  Verifying dependencies for dotenv@1.1.1
+ Installing dotenv@1.1.1
+   Success: dotenv installed successfully.
+   Building Uber/Uber using c backend
+INFO Jester is making jokes at http://0.0.0.0:5000
+Starting 1 threads
