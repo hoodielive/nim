@@ -22,4 +22,5 @@ This repository is for exploring the nim programming language.
   pointers and other memory issues related to managing memory manually.
 * You can use existing C/C++ libraries by writing 'wrapper code' or use c2nim too which converts C/C++ header files to Nim code, which wrap those files.
 * Supports compiling to Javascript and Objective-C (write IOS applications natively in Nim). Also Android apps by using C++ compiliation backend.
-
+* Supports UFCS (Unified Function Call Syntax)::allows you to create procedures on existing objects externally without binding them to a class. Allows
+  procedure calls to be chained.
