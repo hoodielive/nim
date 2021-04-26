@@ -101,3 +101,18 @@ let odd = filter(
 
 echo odd
 echo odd.type
+
+echo numbers
+import sugar
+
+let odd2 = filter(numbers, (x: int) -> bool => x mod 2 != 0)
+echo odd2
+echo odd2.type
+
+proc isValid(x: int, validator: proc (x: int): bool) =
+  if validator(x): echo x, "is valid"
+  else: echo(x, "is Not Valid")
+
+proc isValidAnotherWay(p: int, msvalidator: (p: int) -> bool) =
+  if msvalidator(p): echo(p, "is Valid")
+  else: echo(p, " is NOT Valid")
