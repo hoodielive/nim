@@ -37,4 +37,4 @@ echo ogun
 
 let oguna: Lwa = (name: "Ogunda", power: "Pray")
 
-echo oguna
+echo oguna.name
