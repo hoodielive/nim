@@ -38,3 +38,17 @@ echo ogun
 let oguna: Lwa = (name: "Ogunda", power: "Pray")
 
 echo oguna.name
+
+type
+  Color = enum
+    colRed,
+    colGreen,
+    colBlue
+  Coloria {.pure.} = enum
+    red, green, blue
+
+let color: Color = colRed
+echo color
+
+let coloria: Coloria = red
+echo coloria
