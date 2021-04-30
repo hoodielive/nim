@@ -18,3 +18,11 @@ let jsonNode = parseJson(data)
 
 doAssert jsonNode.kind == JObject
 doAssert jsonNode["key"].kind == JFloat
+
+
+# Retrieve the value of a JsonNode with one of the following
+# helpers: getStr, getFloat, getInt or getBool
+
+let jsonNodeGetter = parseJson(data)
+doAssert jsonNode["key"].getFloat() == 3.14
+echo "All tests have passed."

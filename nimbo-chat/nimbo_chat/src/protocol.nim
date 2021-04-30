@@ -5,12 +5,16 @@ type
     username*: string
     message*: string
 
-  MessageParsingError* = object of Exception
-
 proc parseMessage*(data: string): Message =
   let dataJson = parseJson(data)
   result.username = dataJson["username"].getStr()
-  result.message = dataJson["username"].getStr()
+  result.message = dataJson["message"].getStr()
+
+proc createMessage*(username, message: string): string =
+  result = $(%{
+    "username": %username,
+    "message": %message
+  }) & "\c\l"
 
 when isMainModule:
   block: 
@@ -22,17 +26,19 @@ when isMainModule:
   block:
     try:
       let parsed = parseMessage("data")
-    except MessageParsingError:
+    except JsonParsingError:
       doAssert true
     except: 
       doAssert false
 
-    echo "All test(s) have passed."
+  block:
+    let expected = """
+    {
+      "username": "Esu", 
+      "message": "Alaffia!"
+    }
+    """ & "\c\l"
 
-assert parseJson("null").kind == JNull
-assert parseJson("true").kind == JBool
-assert parseJson("42").kind == JInt
-assert parseJson("3.14").kind == JFloat
-assert parseJson("\"Hi\"").kind == JString
-assert parseJson("""{  "key": "value" }""").kind == JObject
-assert parseJson("[1, 2, 3, 4]").kind == JArray
+    doAssert createMessage("Esu", "Alaffia!") == expected
+
+    echo "All test(s) have passed."
