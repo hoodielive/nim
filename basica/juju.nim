@@ -20,10 +20,11 @@ proc addSugar(amount: int = 2): int =
 
 case ask "Would you like sugar in your tea?"  
 of aYes: 
-  discard addSugar(3)
+  discard addSugar(3000)
 of aNo:
   echo "Oh do take a little!"
   discard addSugar()
 
 proc strcmp(a, b: cstring): cint {.importc: "strcmp", nodecl.}
 let cmp = strcmp("C?", "Easy!")
+echo cmp
