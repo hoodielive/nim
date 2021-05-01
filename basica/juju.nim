@@ -27,4 +27,3 @@ of aNo:
 
 proc strcmp(a, b: cstring): cint {.importc: "strcmp", nodecl.}
 let cmp = strcmp("C?", "Easy!")
-echo cmp
