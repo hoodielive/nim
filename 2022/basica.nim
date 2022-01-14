@@ -29,3 +29,28 @@ var # runs at run time.
 echo "f\n"
 
 const BUFFER: int = 4 # runs at compile time because it's const
+let memset = 334 # doesn't need to be known at compile but value doesn't change.
+
+
+# Integers
+
+let 
+  ai = 11
+  bi = 4
+
+echo "ai + bi = ", ai + bi
+echo "ai mod bi = " , ai mod bi
+echo "ai div bi = ", ai div bi
+echo "ai * bi =", ai * bi
+echo "ai / bi =", ai / bi
+echo "ai - bi =", ai - bi
+
+# Floats
+
+let
+  curry: float = 6.75
+  durry: float = 2.25
+
+echo "Curry is: ", curry + durry
+echo "Durry is: ", durry + curry div curry
+
