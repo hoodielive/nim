@@ -6,7 +6,7 @@ routes:
     resp h1("Hello")
 
 
-  get "/@name?":
+  get "/hello/@name?":
     if @"name" == "":
       resp "No man received :("
     else:
