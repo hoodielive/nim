@@ -106,3 +106,7 @@ echo "g is not equal to h: ", g0 != h0
 echo "g is greater or equal to h: ", g0 >= h0
 echo "g is smaller or equal to h: ", g0 <= h0
 
+echo "What's your name? "
+var name2: string = readLine(stdin)
+echo "Hello, brother ", name2
+
