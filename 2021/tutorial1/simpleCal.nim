@@ -1,5 +1,13 @@
 import strutils
 
+echo "Excuse me fuckboy, this is a calculator, do you understand?"
+
+let answer = readline(stdin)
+
+if answer == "yes":
+  echo "Fuck you."
+
+
 var
   input: string
   num1: float
